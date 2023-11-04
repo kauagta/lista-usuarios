@@ -1,0 +1,8 @@
+cmd
+git add .
+git commit -m "fiz mudança"
+git push
+
+
+python any
+git pull

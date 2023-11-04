@@ -24,5 +24,6 @@ from kauacosta import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.base, name='base' ),
+    path('base2/', views.base2, name='base2' ),
     path('base2/delete/<int:id>/', views.delete, name='delete'),
 ]

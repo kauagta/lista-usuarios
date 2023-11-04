@@ -8,10 +8,44 @@
 </head>
 <body>
     Olá pessoas 
-    <form action="" method="POST">{{% csrf_token %}}
+  
 
-        {{form}}
-        <input type="submit" value="enviar"    >
-    </form>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">n.f</th>
+              <th scope="col">nomes</th>
+              <th scope="col">idade</th>
+              <th scope="col">numero</th>
+              <th scope="col">email</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for a in aluno %}
+           
+        
+            <tr>
+              
+                <th scope="row">{{a.id}}</th>
+                <td>{{a.nome}}</td>
+                <td>{{a.idade}}</td>
+                <td>{{a.numero}}</td>
+                <td>{{a.email}}</td>
+                
+              </tr>
+          
+           {% endfor %}
+          </tbody>
+        </table>
+
+        
+
+       <div class="button">
+        <a href="{% url 'base' %}">voltar</a>
+
+       </div>
+    
 </body>
 </html>
