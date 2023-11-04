@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <h1 class="text-center my-5">
+                nome dos funcionario
+            </h1>
+        </div>
+        <div>
+            <h2>Esses são os nomes do funcionários desse mês. entre todos os funcionários esses
+                foram os que
+                mais contribuiram pra suas equipes!</h2>
+        </div>
+
+    <table class="table">
+    <thead>
+        <tr>
+          <th scope="col">n.f</th>
+          <th scope="col">nomes</th>
+          <th scope="col">idade</th>
+          <th scope="col">numero</th>
+          <th scope="col">email</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for a in aluno %}
+       
+    
+        <tr>
+          
+            <th scope="row">{{a.id}}</th>
+            <td>{{a.nome}}</td>
+            <td>{{a.idade}}</td>
+            <td>{{a.numero}}</td>
+            <td>{{a.email}}</td>
+            
+          </tr>
+      
+       {% endfor %}
+      </tbody>
+    </table>
+
+
+
+
+<style>
+    
+    body{
+    background-color: aqua;
+    
+       
+    }
+    h2{
+    border: solid black 5px;    
+    box-shadow: 10px 8px 5px;
+    border-radius: 18px;
+    }
+    
+</style>
+   
+   
+   
+   
+   
+   
+   
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
